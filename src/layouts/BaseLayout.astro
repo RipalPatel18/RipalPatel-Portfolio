@@ -1,5 +1,4 @@
 ---
-
 import "../styles/main.css";
 
 const {
@@ -19,11 +18,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
     <meta name="theme-color" content="#050813" />
+
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content="/og.png" />
+
     <link rel="icon" href="/favicon.ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,7 +36,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
   </head>
 
   <body>
-    <!-- Global Reveal Observer (fixes “hidden content”) -->
+    <!-- Global Reveal Observer -->
     <script is:inline>
       document.addEventListener("DOMContentLoaded", () => {
         const els = document.querySelectorAll("[data-reveal]");
@@ -88,29 +89,4 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
 
     <slot />
   </body>
-
-import "../styles/global.css";
-const { title = "Portfolio" } = Astro.props;
----
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
-/>
-
-  </head>
-
-<body class="bg-black text-white font-sans">
-  <slot />
-</body>
-
-
 </html>
