@@ -1,11 +1,232 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GlowBackground from "../components/GlowBackground.astro";
+import ScrollProgress from "../components/ScrollProgress.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Reveal from "../components/Reveal.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout
+  title="Ripal Patel | Frontend Developer & Graphic Designer"
+  description="Multi-page portfolio featuring frontend projects, graphic design work, and Figma UI prototypes."
+>
+  <div class="page page-enter">
+    <GlowBackground />
+    <ScrollProgress />
+    <Navbar />
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <Reveal delay={0}>
+          <div class="badge">
+            <span class="dot"></span>
+            Web Dev Student • Frontend + Design • Open to internships
+          </div>
+        </Reveal>
+
+        <Reveal delay={90}>
+          <h1 class="h1">
+            I build <span class="gradient-text">modern web experiences</span><br />
+            and <span class="gradient-text">visual design</span> that stands out.
+          </h1>
+        </Reveal>
+
+        <Reveal delay={160}>
+          <p class="lead">
+            I’m Ripal Patel — a Web Development student focused on clean, responsive interfaces,
+            strong UI polish, and creative graphic design. I build projects and showcase case studies
+            with smooth interactions and modern UI patterns.
+          </p>
+        </Reveal>
+
+        <Reveal delay={240}>
+          <div class="cta">
+            <a class="btn btn-primary" href="/projects">Explore Projects</a>
+            <a class="btn btn-ghost" href="/design">Design & Figma</a>
+            <a class="btn btn-ghost" href="/contact">Contact</a>
+          </div>
+        </Reveal>
+
+        <!-- QUICK CARDS -->
+        <section class="section" style="padding-top: 40px; padding-bottom: 0;">
+          <div class="grid grid-3">
+            <Reveal delay={0}>
+              <div class="card tilt" data-tilt>
+                <div class="card-body">
+                  <h3 class="card-title" style="margin-bottom:6px;">Frontend Focus</h3>
+                  <p class="card-text" style="margin:0;">Responsive layouts • Accessibility • UI polish</p>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={120}>
+              <div class="card tilt" data-tilt>
+                <div class="card-body">
+                  <h3 class="card-title" style="margin-bottom:6px;">Design + Dev</h3>
+                  <p class="card-text" style="margin:0;">Figma UI • Branding • Flyers & social posts</p>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={240}>
+              <div class="card tilt" data-tilt>
+                <div class="card-body">
+                  <h3 class="card-title" style="margin-bottom:6px;">Student Projects</h3>
+                  <p class="card-text" style="margin:0;">Portfolio + real apps • Continuous improvement</p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- SKILLS ICONS (creative section) -->
+    <section class="section" style="padding-top: 40px;">
+      <div class="container">
+        <Reveal delay={0}>
+          <h2 class="section-title">Skills <span style="color:var(--accent)">.</span></h2>
+          <p class="section-sub">
+            A quick overview of the tools I use to build and design. Hover an icon for a smooth modern feel.
+          </p>
+        </Reveal>
+
+        <div class="skills-wrap">
+          <Reveal delay={0}>
+            <div class="card tilt gradient" data-tilt>
+              <div class="card-body">
+                <h3 class="card-title">What I’m strong at</h3>
+                <p class="card-text">
+                  Building clean UI, responsive layouts, and modern components — plus visual design and prototypes.
+                </p>
+
+                <div class="tags">
+                  <span class="tag">Responsive UI</span>
+                  <span class="tag">Accessibility</span>
+                  <span class="tag">Component design</span>
+                  <span class="tag">Figma workflow</span>
+                </div>
+
+                <div class="cta" style="margin-top: 10px;">
+                  <a class="btn btn-primary" href="/projects">See Projects</a>
+                  <a class="btn btn-ghost" href="/design">See Design</a>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={140}>
+            <div class="card tilt" data-tilt>
+              <div class="card-body">
+                <h3 class="skills-card-title">Skills</h3>
+              <div class="skills-grid">
+  <!-- Dev -->
+  <div class="skill"><img src="https://skillicons.dev/icons?i=html" alt="HTML" /><span>HTML</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=css" alt="CSS" /><span>CSS</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript" /><span>JS</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=react" alt="React" /><span>React</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=astro" alt="Astro" /><span>Astro</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" /><span>Node</span></div>
+
+  <div class="skill"><img src="https://skillicons.dev/icons?i=express" alt="Express" /><span>Express</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" /><span>MongoDB</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" /><span>MySQL</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=php" alt="PHP" /><span>PHP</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=laravel" alt="Laravel" /><span>Laravel</span></div>
+
+  <div class="skill"><img src="https://skillicons.dev/icons?i=cs" alt="C#" /><span>C#</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=dotnet" alt=".NET" /><span>.NET</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=git" alt="Git" /><span>Git</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=github" alt="GitHub" /><span>GitHub</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=figma" alt="Figma" /><span>Figma</span></div>
+
+  <!-- Design (local svg icons) -->
+  <div class="skill"><img src="/icons/photoshop.jpg" alt="Photoshop" /><span>Photoshop</span></div>
+  <div class="skill"><img src="/icons/coreldraw.png" alt="CorelDRAW" /><span>CorelDRAW</span></div>
+  <div class="skill"><img src="/icons/procreate.png" alt="Procreate" /><span>Procreate</span></div>
+
+  <!-- Bonus -->
+  <div class="skill"><img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" /><span>TS</span></div>
+  <div class="skill"><img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind" /><span>Tailwind</span></div>
+</div>
+
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        <Reveal delay={0}>
+          <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
+            <div>
+              <h2 class="section-title">Featured Projects <span style="color:var(--accent)">.</span></h2>
+              <p class="section-sub" style="margin-top:10px;">
+                A few projects that represent my best work. Full list available on the Projects page.
+              </p>
+            </div>
+            <a class="btn btn-ghost" href="/projects">View All →</a>
+          </div>
+        </Reveal>
+
+        <div class="grid grid-2">
+          <Reveal delay={0}>
+            <a class="card tilt featured gradient" data-tilt href="/projects">
+              <img class="thumb" src="/projects/fridgechef.jpg" alt="FridgeChef screenshot" />
+              <div class="card-body">
+                <h3 class="card-title" style="font-size:1.35rem;">FridgeChef</h3>
+                <p class="card-text">Smart recipe finder with a clean UI and API-powered results.</p>
+                <div class="tags">
+                  <span class="tag">Node</span><span class="tag">Express</span><span class="tag">API</span>
+                </div>
+                <span style="color:var(--accent); font-weight:750;">Open Projects →</span>
+              </div>
+            </a>
+          </Reveal>
+
+          <Reveal delay={140}>
+            <a class="card tilt" data-tilt href="/projects">
+              <img class="thumb" src="/projects/puzzlepop.jpg" alt="PuzzlePop screenshot" />
+              <div class="card-body">
+                <h3 class="card-title">PuzzlePop</h3>
+                <p class="card-text">Interactive puzzle UI built with HTML/CSS/JS and clean interactions.</p>
+                <div class="tags">
+                  <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+                </div>
+                <span style="color:var(--accent); font-weight:750;">Open Projects →</span>
+              </div>
+            </a>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN PREVIEW -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        <Reveal delay={0}>
+          <div class="card tilt gradient featured" data-tilt>
+            <img class="thumb" src="/design/nutrigo-1.jpg" alt="Design preview" />
+            <div class="card-body">
+              <h2 class="card-title" style="font-size:1.35rem;">Design + Figma Work</h2>
+              <p class="card-text">
+                Branding, flyers, social posts, and UI prototypes — organized in a clean gallery.
+              </p>
+              <div class="cta">
+                <a class="btn btn-primary" href="/design">Open Design Page</a>
+                <a class="btn btn-ghost" href="/contact">Work With Me</a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</BaseLayout>

@@ -1,0 +1,90 @@
+---
+import "../styles/main.css";
+
+const {
+  title = "Ripal Patel | Portfolio",
+  description = "Frontend Developer & Graphic Designer",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="theme-color" content="#050813" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content="/og.png" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Global Reveal Observer (fixes “hidden content”) -->
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        const els = document.querySelectorAll("[data-reveal]");
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) e.target.classList.add("visible");
+            });
+          },
+          { threshold: 0.12 }
+        );
+        els.forEach((el) => io.observe(el));
+      });
+    </script>
+
+    <!-- Global Tilt + Glow Follow -->
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll("[data-tilt]");
+        cards.forEach((card) => {
+          let raf = null;
+
+          const onMove = (e) => {
+            const r = card.getBoundingClientRect();
+            const px = (e.clientX - r.left) / r.width;
+            const py = (e.clientY - r.top) / r.height;
+
+            const rotY = (px - 0.5) * 10;
+            const rotX = (0.5 - py) * 8;
+
+            card.style.setProperty("--mx", `${px * 100}%`);
+            card.style.setProperty("--my", `${py * 100}%`);
+
+            if (raf) cancelAnimationFrame(raf);
+            raf = requestAnimationFrame(() => {
+              card.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-4px)`;
+            });
+          };
+
+          const onLeave = () => {
+            if (raf) cancelAnimationFrame(raf);
+            card.style.transform = `perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
+          };
+
+          card.addEventListener("mousemove", onMove);
+          card.addEventListener("mouseleave", onLeave);
+        });
+      });
+    </script>
+
+    <slot />
+  </body>
+</html>

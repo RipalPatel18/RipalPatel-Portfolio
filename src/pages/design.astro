@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GlowBackground from "../components/GlowBackground.astro";
+import ScrollProgress from "../components/ScrollProgress.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Reveal from "../components/Reveal.astro";
+import PageHeader from "../components/PageHeader.astro";
+---
+
+<BaseLayout title="Design | Ripal Patel" description="Graphic design and Figma work by Ripal Patel.">
+  <div class="page page-enter">
+    <GlowBackground />
+    <ScrollProgress />
+    <Navbar />
+
+    <PageHeader title="Design" subtitle="Branding, flyers, and UI screens. Click any image to view full size." />
+
+    <main class="section" style="padding-top:0">
+      <div class="container">
+        <div class="grid grid-3">
+          <Reveal delay={0}>
+            <a class="card tilt" data-tilt href="/design/nutrigo-1.jpg" target="_blank">
+              <img class="thumb" src="/design/nutrigo-1.jpg" alt="Nutrigo design" />
+              <div class="card-body">
+                <h3 class="card-title">Nutrigo Branding</h3>
+                <p class="card-text">Branding / social design</p>
+              </div>
+            </a>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <a class="card tilt" data-tilt href="/design/oxyfit-flyer.jpg" target="_blank">
+              <img class="thumb" src="/design/oxyfit-flyer.jpg" alt="Oxyfit flyer" />
+              <div class="card-body">
+                <h3 class="card-title">Oxyfit Flyer</h3>
+                <p class="card-text">Promotional flyer</p>
+              </div>
+            </a>
+          </Reveal>
+
+          <Reveal delay={240}>
+            <a class="card tilt" data-tilt href="/design/ui-1.jpg" target="_blank">
+              <img class="thumb" src="/design/ui-1.jpg" alt="UI screens" />
+              <div class="card-body">
+                <h3 class="card-title">UI Screens</h3>
+                <p class="card-text">Figma UI exploration</p>
+              </div>
+            </a>
+          </Reveal>
+        </div>
+
+        <Reveal delay={140}>
+          <div class="card tilt gradient" data-tilt style="margin-top:18px;">
+            <div class="card-body">
+              <h2 class="card-title" style="font-size:1.35rem;">Figma Prototype</h2>
+              <p class="card-text">Add your Figma prototype link below.</p>
+              <div class="cta">
+                <a class="btn btn-primary" href="#" target="_blank">View Figma Project</a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>

@@ -1,0 +1,52 @@
+---
+const nav = [
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "Design", href: "/design" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+
+const currentPath = Astro.url.pathname;
+const normalize = (p) => (p !== "/" && p.endsWith("/") ? p.slice(0, -1) : p);
+const isActive = (href) => normalize(currentPath) === normalize(href);
+---
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/">Ripal Patel</a>
+
+    <div class="nav-links">
+      {nav.map((item) => (
+        <a href={item.href} class={isActive(item.href) ? "active" : ""}>
+          {item.label}
+        </a>
+      ))}
+    </div>
+
+    <button id="menuBtn" class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+      Menu
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="mobile">
+    <div class="container">
+      {nav.map((item) => (
+        <a href={item.href} class={isActive(item.href) ? "active" : ""}>
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <script is:inline>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        const open = menu.classList.toggle("show");
+        btn.setAttribute("aria-expanded", String(open));
+      });
+    }
+  </script>
+</nav>
