@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+<<<<<<< Updated upstream
 import GlowBackground from "../components/GlowBackground.astro";
 import ScrollProgress from "../components/ScrollProgress.astro";
 import Navbar from "../components/Navbar.astro";
@@ -229,4 +230,385 @@ import Reveal from "../components/Reveal.astro";
 
     <Footer />
   </div>
+=======
+import Navbar from "../components/Navbar.astro";
+---
+
+<BaseLayout title="Ripal Patel | Portfolio">
+  <div class="relative min-h-screen bg-black overflow-hidden">
+    <!-- glow -->
+    <div class="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-indigo-500/20 blur-3xl"></div>
+    <div class="pointer-events-none absolute top-40 right-0 h-[400px] w-[400px] rounded-full bg-fuchsia-500/10 blur-3xl"></div>
+
+    <Navbar />
+
+  <!-- HERO SECTION -->
+  <section class="min-h-screen flex items-center bg-black text-white section pt-28">
+  <div class="container">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
+        <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+        Available for internship & freelance
+      </div>
+
+      <h1 class="mt-6 text-5xl md:text-7xl font-bold leading-tight">
+        Frontend Developer
+        <span class="text-indigo-400"> & Graphic Designer</span>
+      </h1>
+
+      <p class="mt-6 text-lg md:text-xl text-white/70 leading-relaxed">
+        Web Development student building clean, responsive websites and
+        creating modern UI/graphic designs using Figma and Adobe tools.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a
+          href="#projects"
+          class="inline-flex items-center justify-center rounded-xl bg-indigo-500 px-6 py-3 text-sm font-semibold hover:bg-indigo-400 transition"
+        >
+          View Projects
+        </a>
+        <a
+          href="#design"
+          class="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 text-sm font-semibold hover:border-white/30 transition"
+        >
+          View Design Work
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- SKILLS SECTION -->
+<section id="skills" class="bg-black text-white section">
+  <div class="container">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10">
+      Skills
+      <span class="text-indigo-400">.</span>
+    </h2>
+    <div class="grid gap-8 md:grid-cols-2">
+      <!-- Development Skills -->
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+        <h3 class="text-xl font-semibold mb-4">Development</h3>
+	        <div class="flex flex-wrap gap-3 text-sm">
+				<span class="px-3 py-2 rounded-full bg-white/10">HTML</span>
+				<span class="px-4 py-2 rounded-full bg-white/10">CSS</span>
+				<span class="px-4 py-2 rounded-full bg-white/10">JavaScript</span>
+				<span class="px-4 py-2 rounded-full bg-white/10">Tailwind CSS</span>
+				<span class="px-4 py-2 rounded-full bg-white/10">Astro</span>
+				<span class="px-4 py-2 rounded-full bg-white/10">React</span>
+				<span class="px-4 py-2 rounded-full bg-white/10">Next.js</span>
+				<span class="px-4 py-2 rounded-full bg-white/10">MongoDb</span>
+				<span class="px-4 py-2 rounded-full bg-white/10">ASP.NET Core</span>
+				<span class="px-4 py-2 rounded-full bg-white/10">Git / GitHub</span>
+        	</div>
+      </div>
+
+      <!-- Design Skills -->
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+        <h3 class="text-xl font-semibold mb-4">Design</h3>
+        <div class="flex flex-wrap gap-3 text-sm">
+          <span class="px-4 py-2 rounded-full bg-white/10">Figma</span>
+		  <span class="px-4 py-2 rounded-full bg-white/10">Canva</span>
+          <span class="px-4 py-2 rounded-full bg-white/10">UI Design</span>
+          <span class="px-4 py-2 rounded-full bg-white/10">Wireframing</span>
+          <span class="px-4 py-2 rounded-full bg-white/10">Prototyping</span>
+          <span class="px-4 py-2 rounded-full bg-white/10">Photoshop</span>
+          <span class="px-4 py-2 rounded-full bg-white/10">Illustrator</span>
+          <span class="px-4 py-2 rounded-full bg-white/10">Branding</span>
+          <span class="px-4 py-2 rounded-full bg-white/10">Social Media Design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="bg-black text-white section">
+  <div class="container">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">
+      Projects
+      <span class="text-indigo-400">.</span>
+    </h2>
+
+    <!-- Featured Project -->
+    <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20 hover:bg-white/10">
+      <div class="grid md:grid-cols-2">
+        <img
+          src="/projects/FridgeChef.jpg"
+          alt="FridgeChef project screenshot"
+          class="h-64 md:h-full w-full object-cover"
+          loading="lazy"
+        />
+        <div class="p-8">
+          <h3 class="text-2xl font-semibold mb-2">FridgeChef</h3>
+          <p class="text-white/70 mb-4 leading-relaxed">
+            Smart recipe finder that suggests recipes based on ingredients.
+            Built with APIs and focused on clean UI + usability.
+          </p>
+
+          <div class="flex flex-wrap gap-2 text-sm mb-6">
+            <span class="px-3 py-1 bg-white/10 rounded-full">Node.js</span>
+            <span class="px-3 py-1 bg-white/10 rounded-full">Express</span>
+            <span class="px-3 py-1 bg-white/10 rounded-full">API</span>
+            <span class="px-3 py-1 bg-white/10 rounded-full">UI Design</span>
+          </div>
+
+          <div class="flex gap-3">
+            <a
+              href="#"
+              class="inline-flex items-center justify-center rounded-xl bg-indigo-500 px-5 py-3 text-sm font-semibold hover:bg-indigo-400 transition"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+            <a
+              href="#"
+              class="inline-flex items-center justify-center rounded-xl border border-white/15 px-5 py-3 text-sm font-semibold hover:border-white/30 transition"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Projects -->
+    <div class="grid gap-8 md:grid-cols-2 mt-10">
+      <!-- Project Card -->
+      <div class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20 hover:bg-white/10">
+        <img
+          src="/projects/puzzlepop.jpg"
+          alt="PuzzlePop project screenshot"
+          class="h-48 w-full object-cover transition group-hover:scale-105"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">PuzzlePop</h3>
+          <p class="text-white/70 mb-4">
+            Interactive puzzle game built with HTML, CSS, and JavaScript.
+          </p>
+
+          <div class="flex flex-wrap gap-2 text-sm mb-5">
+            <span class="px-3 py-1 bg-white/10 rounded-full">HTML</span>
+            <span class="px-3 py-1 bg-white/10 rounded-full">CSS</span>
+            <span class="px-3 py-1 bg-white/10 rounded-full">JavaScript</span>
+          </div>
+
+          <div class="flex gap-3">
+            <a
+              href="#"
+              class="text-indigo-400 hover:underline text-sm"
+              target="_blank"
+            >
+              Live
+            </a>
+            <a
+              href="#"
+              class="text-indigo-400 hover:underline text-sm"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate this card for another project -->
+      <div class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20 hover:bg-white/10">
+        <img
+          src="/projects/fridgechef.jpg"
+          alt="Another project screenshot"
+          class="h-48 w-full object-cover transition group-hover:scale-105"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Another Project</h3>
+          <p class="text-white/70 mb-4">
+            Short 1–2 line description of what it does and what you built.
+          </p>
+
+          <div class="flex flex-wrap gap-2 text-sm mb-5">
+            <span class="px-3 py-1 bg-white/10 rounded-full">Tech 1</span>
+            <span class="px-3 py-1 bg-white/10 rounded-full">Tech 2</span>
+            <span class="px-3 py-1 bg-white/10 rounded-full">Tech 3</span>
+          </div>
+
+          <div class="flex gap-3">
+            <a href="#" class="text-indigo-400 hover:underline text-sm" target="_blank">Live</a>
+            <a href="#" class="text-indigo-400 hover:underline text-sm" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- DESIGN SECTION -->
+<section id="design" class="bg-black text-white section">
+  <div class="container">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">
+      Design Work
+      <span class="text-indigo-400">.</span>
+    </h2>
+    <!-- Design Gallery Grid -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Item 1 -->
+      <a
+        href="/design/nutrigo-1.jpg"
+        target="_blank"
+        class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20"
+      >
+        <img
+          src="/design/nutrigo-1.jpg"
+          alt="Nutrigo design"
+          class="h-56 w-full object-cover transition group-hover:scale-105"
+          loading="lazy"
+        />
+        <div class="p-4">
+          <h3 class="font-semibold">Nutrigo Branding</h3>
+          <p class="text-white/70 text-sm">Social media post design</p>
+        </div>
+      </a>
+      <!-- Item 2 -->
+      <a
+        href="/design/oxyfit-flyer.jpg"
+        target="_blank"
+        class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20"
+      >
+        <img
+          src="/design/oxyfit-flyer.jpg"
+          alt="Oxyfit flyer"
+          class="h-56 w-full object-cover transition group-hover:scale-105"
+          loading="lazy"
+        />
+        <div class="p-4">
+          <h3 class="font-semibold">Oxyfit Flyer</h3>
+          <p class="text-white/70 text-sm">Promotional flyer design</p>
+        </div>
+      </a>
+
+      <!-- Item 3 -->
+      <a
+        href="/design/ui-1.jpg"
+        target="_blank"
+        class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20"
+      >
+        <img
+          src="/design/redroot.jpg"
+          alt="UI design"
+          class="h-56 w-full object-cover transition group-hover:scale-105"
+          loading="lazy"
+        />
+        <div class="p-4">
+          <h3 class="font-semibold">UI Screens</h3>
+          <p class="text-white/70 text-sm">Figma UI exploration</p>
+        </div>
+      </a>
+    </div>
+    <!-- Figma Case Study Card -->
+    <div class="mt-10 rounded-2xl border border-white/10 bg-white/5 p-8 transition hover:border-white/20 hover:bg-white/10">
+      <h3 class="text-xl font-semibold mb-2">Figma Prototype</h3>
+      <p class="text-white/70 mb-4 max-w-2xl leading-relaxed">
+        I design UI screens, wireframes, and interactive prototypes in Figma.
+        Here’s one of my recent prototype projects.
+      </p>
+
+      <a href="#" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-indigo-500 px-5 py-3 text-sm font-semibold hover:bg-indigo-400 transition"> View Figma Project</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="bg-black text-white section">
+  <div class="container">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">
+      Contact
+      <span class="text-indigo-400">.</span>
+    </h2>
+
+    <div class="grid gap-8 md:grid-cols-2">
+      <!-- Left Text -->
+      <div>
+        <p class="text-white/70 text-lg mb-6 max-w-xl">
+          Want to collaborate or have an opportunity? Feel free to reach out.
+          I’m open to internships, freelance design work, and web projects.
+        </p>
+
+        <div class="space-y-3 text-white/80">
+          <p>
+            <span class="text-white/50">Email:</span>
+            <a href="mailto:your-email@example.com" class="text-indigo-400 hover:underline">
+              your-email@example.com
+            </a>
+          </p>
+
+          <p>
+            <span class="text-white/50">GitHub:</span>
+            <a href="#" class="text-indigo-400 hover:underline">
+              github.com/RipalPatel18
+            </a>
+          </p>
+
+          <p>
+            <span class="text-white/50">LinkedIn:</span>
+            <a href="#" class="text-indigo-400 hover:underline">
+              linkedin.com/in/your-link
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Card -->
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+        <h3 class="text-xl font-semibold mb-2">Quick Message</h3>
+        <p class="text-white/70 mb-6">
+          You can email me directly, or connect on LinkedIn.
+        </p>
+
+        <div class="flex flex-col gap-3">
+          <a href="mailto:your-email@example.com" class="inline-flex justify-center rounded-xl bg-indigo-500 px-5 py-3 text-sm font-semibold hover:bg-indigo-400 transition">
+            Email Me
+          </a>
+
+          <a href="#" class="inline-flex justify-center rounded-xl border border-white/15 px-5 py-3 text-sm font-semibold hover:border-white/30 transition" >
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="bg-black text-white px-6 py-10 border-t border-white/10">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="text-white/60 text-sm">
+      © {new Date().getFullYear()} Ripal Patel. All rights reserved.
+    </p>
+
+    <div class="flex gap-6 text-sm text-white/70">
+      <a href="#projects" class="hover:text-indigo-400">Projects</a>
+      <a href="#design" class="hover:text-indigo-400">Design</a>
+      <a href="#skills" class="hover:text-indigo-400">Skills</a>
+      <a href="#contact" class="hover:text-indigo-400">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+>>>>>>> Stashed changes
 </BaseLayout>
