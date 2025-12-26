@@ -1,612 +1,261 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import GlowBackground from "../components/GlowBackground.astro";
-import ScrollProgress from "../components/ScrollProgress.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-import Reveal from "../components/Reveal.astro";
+import { projects } from "../data/projects";
+
+// Featured project for the big section
+const featured = projects[0];
 ---
 
-<BaseLayout
-  title="Ripal Patel | Frontend Developer & Graphic Designer"
-  description="Multi-page portfolio featuring frontend projects, graphic design work, and Figma UI prototypes."
->
-  <div class="page page-enter">
-    <GlowBackground />
-    <ScrollProgress />
-    <Navbar />
+<BaseLayout title="Ripal | Home">
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <Reveal delay={0}>
-          <div class="badge">
-            <span class="dot"></span>
-            Web Dev Student • Frontend + Design • Open to internships
-          </div>
-        </Reveal>
-
-        <Reveal delay={90}>
-          <h1 class="h1">
-            I build <span class="gradient-text">modern web experiences</span><br />
-            and <span class="gradient-text">visual design</span> that stands out.
-          </h1>
-        </Reveal>
-
-        <Reveal delay={160}>
-          <p class="lead">
-            I’m Ripal Patel — a Web Development student focused on clean, responsive interfaces,
-            strong UI polish, and creative graphic design. I build projects and showcase case studies
-            with smooth interactions and modern UI patterns.
-          </p>
-        </Reveal>
-
-        <Reveal delay={240}>
-          <div class="cta">
-            <a class="btn btn-primary" href="/projects">Explore Projects</a>
-            <a class="btn btn-ghost" href="/design">Design & Figma</a>
-            <a class="btn btn-ghost" href="/contact">Contact</a>
-          </div>
-        </Reveal>
-
-        <!-- QUICK CARDS -->
-        <section class="section" style="padding-top: 40px; padding-bottom: 0;">
-          <div class="grid grid-3">
-            <Reveal delay={0}>
-              <div class="card tilt" data-tilt>
-                <div class="card-body">
-                  <h3 class="card-title" style="margin-bottom:6px;">Frontend Focus</h3>
-                  <p class="card-text" style="margin:0;">Responsive layouts • Accessibility • UI polish</p>
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal delay={120}>
-              <div class="card tilt" data-tilt>
-                <div class="card-body">
-                  <h3 class="card-title" style="margin-bottom:6px;">Design + Dev</h3>
-                  <p class="card-text" style="margin:0;">Figma UI • Branding • Flyers & social posts</p>
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal delay={240}>
-              <div class="card tilt" data-tilt>
-                <div class="card-body">
-                  <h3 class="card-title" style="margin-bottom:6px;">Student Projects</h3>
-                  <p class="card-text" style="margin:0;">Portfolio + real apps • Continuous improvement</p>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <!-- SKILLS ICONS (creative section) -->
-    <section class="section" style="padding-top: 40px;">
-      <div class="container">
-        <Reveal delay={0}>
-          <h2 class="section-title">Skills <span style="color:var(--accent)">.</span></h2>
-          <p class="section-sub">
-            A quick overview of the tools I use to build and design. Hover an icon for a smooth modern feel.
-          </p>
-        </Reveal>
-
-        <div class="skills-wrap">
-          <Reveal delay={0}>
-            <div class="card tilt gradient" data-tilt>
-              <div class="card-body">
-                <h3 class="card-title">What I’m strong at</h3>
-                <p class="card-text">
-                  Building clean UI, responsive layouts, and modern components — plus visual design and prototypes.
-                </p>
-
-                <div class="tags">
-                  <span class="tag">Responsive UI</span>
-                  <span class="tag">Accessibility</span>
-                  <span class="tag">Component design</span>
-                  <span class="tag">Figma workflow</span>
-                </div>
-
-                <div class="cta" style="margin-top: 10px;">
-                  <a class="btn btn-primary" href="/projects">See Projects</a>
-                  <a class="btn btn-ghost" href="/design">See Design</a>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={140}>
-            <div class="card tilt" data-tilt>
-              <div class="card-body">
-                <h3 class="skills-card-title">Skills</h3>
-              <div class="skills-grid">
-  <!-- Dev -->
-  <div class="skill"><img src="https://skillicons.dev/icons?i=html" alt="HTML" /><span>HTML</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=css" alt="CSS" /><span>CSS</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript" /><span>JS</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=react" alt="React" /><span>React</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=astro" alt="Astro" /><span>Astro</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" /><span>Node</span></div>
-
-  <div class="skill"><img src="https://skillicons.dev/icons?i=express" alt="Express" /><span>Express</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" /><span>MongoDB</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" /><span>MySQL</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=php" alt="PHP" /><span>PHP</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=laravel" alt="Laravel" /><span>Laravel</span></div>
-
-  <div class="skill"><img src="https://skillicons.dev/icons?i=cs" alt="C#" /><span>C#</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=dotnet" alt=".NET" /><span>.NET</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=git" alt="Git" /><span>Git</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=github" alt="GitHub" /><span>GitHub</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=figma" alt="Figma" /><span>Figma</span></div>
-
-  <!-- Design (local svg icons) -->
-  <div class="skill"><img src="/icons/photoshop.jpg" alt="Photoshop" /><span>Photoshop</span></div>
-  <div class="skill"><img src="/icons/coreldraw.png" alt="CorelDRAW" /><span>CorelDRAW</span></div>
-  <div class="skill"><img src="/icons/procreate.png" alt="Procreate" /><span>Procreate</span></div>
-
-  <!-- Bonus -->
-  <div class="skill"><img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" /><span>TS</span></div>
-  <div class="skill"><img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind" /><span>Tailwind</span></div>
-</div>
-
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURED PROJECTS -->
-    <section class="section" style="padding-top: 20px;">
-      <div class="container">
-        <Reveal delay={0}>
-          <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-            <div>
-              <h2 class="section-title">Featured Projects <span style="color:var(--accent)">.</span></h2>
-              <p class="section-sub" style="margin-top:10px;">
-                A few projects that represent my best work. Full list available on the Projects page.
-              </p>
-            </div>
-            <a class="btn btn-ghost" href="/projects">View All →</a>
-          </div>
-        </Reveal>
-
-        <div class="grid grid-2">
-          <Reveal delay={0}>
-            <a class="card tilt featured gradient" data-tilt href="/projects">
-              <img class="thumb" src="/projects/fridgechef.jpg" alt="FridgeChef screenshot" />
-              <div class="card-body">
-                <h3 class="card-title" style="font-size:1.35rem;">FridgeChef</h3>
-                <p class="card-text">Smart recipe finder with a clean UI and API-powered results.</p>
-                <div class="tags">
-                  <span class="tag">Node</span><span class="tag">Express</span><span class="tag">API</span>
-                </div>
-                <span style="color:var(--accent); font-weight:750;">Open Projects →</span>
-              </div>
-            </a>
-          </Reveal>
-
-          <Reveal delay={140}>
-            <a class="card tilt" data-tilt href="/projects">
-              <img class="thumb" src="/projects/puzzlepop.jpg" alt="PuzzlePop screenshot" />
-              <div class="card-body">
-                <h3 class="card-title">PuzzlePop</h3>
-                <p class="card-text">Interactive puzzle UI built with HTML/CSS/JS and clean interactions.</p>
-                <div class="tags">
-                  <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
-                </div>
-                <span style="color:var(--accent); font-weight:750;">Open Projects →</span>
-              </div>
-            </a>
-          </Reveal>
-        </div>
-      </div>
-    </section>
-
-    <!-- DESIGN PREVIEW -->
-    <section class="section" style="padding-top: 20px;">
-      <div class="container">
-        <Reveal delay={0}>
-          <div class="card tilt gradient featured" data-tilt>
-            <img class="thumb" src="/design/nutrigo-1.jpg" alt="Design preview" />
-            <div class="card-body">
-              <h2 class="card-title" style="font-size:1.35rem;">Design + Figma Work</h2>
-              <p class="card-text">
-                Branding, flyers, social posts, and UI prototypes — organized in a clean gallery.
-              </p>
-              <div class="cta">
-                <a class="btn btn-primary" href="/design">Open Design Page</a>
-                <a class="btn btn-ghost" href="/contact">Work With Me</a>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </div>
-    </section>
-
-    <Footer />
-  </div>
-
-import Navbar from "../components/Navbar.astro";
----
-
-<BaseLayout title="Ripal Patel | Portfolio">
-  <div class="relative min-h-screen bg-black overflow-hidden">
-    <!-- glow -->
-    <div class="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-indigo-500/20 blur-3xl"></div>
-    <div class="pointer-events-none absolute top-40 right-0 h-[400px] w-[400px] rounded-full bg-fuchsia-500/10 blur-3xl"></div>
-
-    <Navbar />
-
-  <!-- HERO SECTION -->
-  <section class="min-h-screen flex items-center bg-black text-white section pt-28">
-  <div class="container">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
-        <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-        Available for internship & freelance
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-center" data-reveal="up">
+      <div class="hero-badge glass">
+        <span class="badge-dot">new</span>
+        <span>Open to Co-op / Internships</span>
       </div>
 
-      <h1 class="mt-6 text-5xl md:text-7xl font-bold leading-tight">
-        Frontend Developer
-        <span class="text-indigo-400"> & Graphic Designer</span>
+      <h1 class="hero-title">
+        Developer <span class="hero-x">X</span> Designer
       </h1>
 
-      <p class="mt-6 text-lg md:text-xl text-white/70 leading-relaxed">
-        Web Development student building clean, responsive websites and
-        creating modern UI/graphic designs using Figma and Adobe tools.
+      <p class="hero-sub">
+        Hi, I’m Ripal Patel — I design and build clean, modern web experiences.
       </p>
 
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a
-          href="#projects"
-          class="inline-flex items-center justify-center rounded-xl bg-indigo-500 px-6 py-3 text-sm font-semibold hover:bg-indigo-400 transition"
-        >
-          View Projects
-        </a>
-        <a
-          href="#design"
-          class="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 text-sm font-semibold hover:border-white/30 transition"
-        >
-          View Design Work
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View Work <span class="btn-icon">→</span></a>
+        <a class="btn btn-ghost" href="mailto:yourname@email.com">
+          ✉ yourname@email.com
         </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- ABOUT -->
+  <section id="about" class="section section-lg">
+    <div class="container hero-center" data-reveal="up">
+      <h2 class="section-title">About Me</h2>
 
-
-  <!-- SKILLS SECTION -->
-<section id="skills" class="bg-black text-white section">
-  <div class="container">
-    <h2 class="text-3xl md:text-4xl font-bold mb-10">
-      Skills
-      <span class="text-indigo-400">.</span>
-    </h2>
-    <div class="grid gap-8 md:grid-cols-2">
-      <!-- Development Skills -->
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
-        <h3 class="text-xl font-semibold mb-4">Development</h3>
-	        <div class="flex flex-wrap gap-3 text-sm">
-				<span class="px-3 py-2 rounded-full bg-white/10">HTML</span>
-				<span class="px-4 py-2 rounded-full bg-white/10">CSS</span>
-				<span class="px-4 py-2 rounded-full bg-white/10">JavaScript</span>
-				<span class="px-4 py-2 rounded-full bg-white/10">Tailwind CSS</span>
-				<span class="px-4 py-2 rounded-full bg-white/10">Astro</span>
-				<span class="px-4 py-2 rounded-full bg-white/10">React</span>
-				<span class="px-4 py-2 rounded-full bg-white/10">Next.js</span>
-				<span class="px-4 py-2 rounded-full bg-white/10">MongoDb</span>
-				<span class="px-4 py-2 rounded-full bg-white/10">ASP.NET Core</span>
-				<span class="px-4 py-2 rounded-full bg-white/10">Git / GitHub</span>
-        	</div>
-      </div>
-
-      <!-- Design Skills -->
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
-        <h3 class="text-xl font-semibold mb-4">Design</h3>
-        <div class="flex flex-wrap gap-3 text-sm">
-          <span class="px-4 py-2 rounded-full bg-white/10">Figma</span>
-		  <span class="px-4 py-2 rounded-full bg-white/10">Canva</span>
-          <span class="px-4 py-2 rounded-full bg-white/10">UI Design</span>
-          <span class="px-4 py-2 rounded-full bg-white/10">Wireframing</span>
-          <span class="px-4 py-2 rounded-full bg-white/10">Prototyping</span>
-          <span class="px-4 py-2 rounded-full bg-white/10">Photoshop</span>
-          <span class="px-4 py-2 rounded-full bg-white/10">Illustrator</span>
-          <span class="px-4 py-2 rounded-full bg-white/10">Branding</span>
-          <span class="px-4 py-2 rounded-full bg-white/10">Social Media Design</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- PROJECTS SECTION -->
-<section id="projects" class="bg-black text-white section">
-  <div class="container">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12">
-      Projects
-      <span class="text-indigo-400">.</span>
-    </h2>
-
-    <!-- Featured Project -->
-    <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20 hover:bg-white/10">
-      <div class="grid md:grid-cols-2">
-        <img
-          src="/projects/FridgeChef.jpg"
-          alt="FridgeChef project screenshot"
-          class="h-64 md:h-full w-full object-cover"
-          loading="lazy"
-        />
-        <div class="p-8">
-          <h3 class="text-2xl font-semibold mb-2">FridgeChef</h3>
-          <p class="text-white/70 mb-4 leading-relaxed">
-            Smart recipe finder that suggests recipes based on ingredients.
-            Built with APIs and focused on clean UI + usability.
-          </p>
-
-          <div class="flex flex-wrap gap-2 text-sm mb-6">
-            <span class="px-3 py-1 bg-white/10 rounded-full">Node.js</span>
-            <span class="px-3 py-1 bg-white/10 rounded-full">Express</span>
-            <span class="px-3 py-1 bg-white/10 rounded-full">API</span>
-            <span class="px-3 py-1 bg-white/10 rounded-full">UI Design</span>
-          </div>
-
-          <div class="flex gap-3">
-            <a
-              href="#"
-              class="inline-flex items-center justify-center rounded-xl bg-indigo-500 px-5 py-3 text-sm font-semibold hover:bg-indigo-400 transition"
-              target="_blank"
-            >
-              Live Demo
-            </a>
-            <a
-              href="#"
-              class="inline-flex items-center justify-center rounded-xl border border-white/15 px-5 py-3 text-sm font-semibold hover:border-white/30 transition"
-              target="_blank"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Other Projects -->
-    <div class="grid gap-8 md:grid-cols-2 mt-10">
-      <!-- Project Card -->
-      <div class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20 hover:bg-white/10">
-        <img
-          src="/projects/puzzlepop.jpg"
-          alt="PuzzlePop project screenshot"
-          class="h-48 w-full object-cover transition group-hover:scale-105"
-          loading="lazy"
-        />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">PuzzlePop</h3>
-          <p class="text-white/70 mb-4">
-            Interactive puzzle game built with HTML, CSS, and JavaScript.
-          </p>
-
-          <div class="flex flex-wrap gap-2 text-sm mb-5">
-            <span class="px-3 py-1 bg-white/10 rounded-full">HTML</span>
-            <span class="px-3 py-1 bg-white/10 rounded-full">CSS</span>
-            <span class="px-3 py-1 bg-white/10 rounded-full">JavaScript</span>
-          </div>
-
-          <div class="flex gap-3">
-            <a
-              href="#"
-              class="text-indigo-400 hover:underline text-sm"
-              target="_blank"
-            >
-              Live
-            </a>
-            <a
-              href="#"
-              class="text-indigo-400 hover:underline text-sm"
-              target="_blank"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Duplicate this card for another project -->
-      <div class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20 hover:bg-white/10">
-        <img
-          src="/projects/fridgechef.jpg"
-          alt="Another project screenshot"
-          class="h-48 w-full object-cover transition group-hover:scale-105"
-          loading="lazy"
-        />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Another Project</h3>
-          <p class="text-white/70 mb-4">
-            Short 1–2 line description of what it does and what you built.
-          </p>
-
-          <div class="flex flex-wrap gap-2 text-sm mb-5">
-            <span class="px-3 py-1 bg-white/10 rounded-full">Tech 1</span>
-            <span class="px-3 py-1 bg-white/10 rounded-full">Tech 2</span>
-            <span class="px-3 py-1 bg-white/10 rounded-full">Tech 3</span>
-          </div>
-
-          <div class="flex gap-3">
-            <a href="#" class="text-indigo-400 hover:underline text-sm" target="_blank">Live</a>
-            <a href="#" class="text-indigo-400 hover:underline text-sm" target="_blank">GitHub</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- DESIGN SECTION -->
-<section id="design" class="bg-black text-white section">
-  <div class="container">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12">
-      Design Work
-      <span class="text-indigo-400">.</span>
-    </h2>
-    <!-- Design Gallery Grid -->
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Item 1 -->
-      <a
-        href="/design/nutrigo-1.jpg"
-        target="_blank"
-        class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20"
-      >
-        <img
-          src="/design/nutrigo-1.jpg"
-          alt="Nutrigo design"
-          class="h-56 w-full object-cover transition group-hover:scale-105"
-          loading="lazy"
-        />
-        <div class="p-4">
-          <h3 class="font-semibold">Nutrigo Branding</h3>
-          <p class="text-white/70 text-sm">Social media post design</p>
-        </div>
-      </a>
-      <!-- Item 2 -->
-      <a
-        href="/design/oxyfit-flyer.jpg"
-        target="_blank"
-        class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20"
-      >
-        <img
-          src="/design/oxyfit-flyer.jpg"
-          alt="Oxyfit flyer"
-          class="h-56 w-full object-cover transition group-hover:scale-105"
-          loading="lazy"
-        />
-        <div class="p-4">
-          <h3 class="font-semibold">Oxyfit Flyer</h3>
-          <p class="text-white/70 text-sm">Promotional flyer design</p>
-        </div>
-      </a>
-
-      <!-- Item 3 -->
-      <a
-        href="/design/ui-1.jpg"
-        target="_blank"
-        class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition hover:border-white/20"
-      >
-        <img
-          src="/design/redroot.jpg"
-          alt="UI design"
-          class="h-56 w-full object-cover transition group-hover:scale-105"
-          loading="lazy"
-        />
-        <div class="p-4">
-          <h3 class="font-semibold">UI Screens</h3>
-          <p class="text-white/70 text-sm">Figma UI exploration</p>
-        </div>
-      </a>
-    </div>
-    <!-- Figma Case Study Card -->
-    <div class="mt-10 rounded-2xl border border-white/10 bg-white/5 p-8 transition hover:border-white/20 hover:bg-white/10">
-      <h3 class="text-xl font-semibold mb-2">Figma Prototype</h3>
-      <p class="text-white/70 mb-4 max-w-2xl leading-relaxed">
-        I design UI screens, wireframes, and interactive prototypes in Figma.
-        Here’s one of my recent prototype projects.
+      <p class="section-sub">
+        I’m a Web Development student at Humber with strong experience in UI design
+        and frontend development.
       </p>
 
-      <a href="#" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-indigo-500 px-5 py-3 text-sm font-semibold hover:bg-indigo-400 transition"> View Figma Project</a>
+      <p class="muted" style="max-width:760px; font-size:18px; line-height:1.9; margin:0;">
+        I enjoy turning ideas into polished interfaces using HTML, CSS, JavaScript, React, and Astro.
+        I focus on accessibility, performance, and simple design that feels great to use.
+      </p>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- PROJECTS (Featured Case Study like screenshot) -->
+  <section id="projects" class="section section-lg">
+    <div class="container center" data-reveal="up">
+      <div class="section-eyebrow">
+        <span class="dot"></span>
+        <span>FEATURED CASE STUDIES</span>
+      </div>
 
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">
+        Clean case studies with real features, GitHub + Live links.
+      </p>
+    </div>
 
+    <div class="container" data-reveal="up">
+      <div class="featured">
+        <!-- LEFT big card -->
+        <a class="featured-card glass" href={`/projects/${featured.slug}`}>
+          <div class="featured-card-top">
+            <p class="featured-card-text">
+              {featured.heroLine ?? featured.summary}
+            </p>
+            <span class="featured-arrow">→</span>
+          </div>
 
-<!-- CONTACT SECTION -->
-<section id="contact" class="bg-black text-white section">
-  <div class="container">
+          <div class="featured-media">
+            <img
+              src={featured.image}
+              alt={`${featured.title} preview`}
+              loading="lazy"
+            />
+          </div>
+        </a>
 
-    <h2 class="text-3xl md:text-4xl font-bold mb-12">
-      Contact
-      <span class="text-indigo-400">.</span>
-    </h2>
+        <!-- RIGHT details -->
+        <div class="featured-info">
+          <div class="featured-head">
+            <span class="accent-line"></span>
+            <div>
+              <h3 class="featured-title">{featured.title}</h3>
+              <p class="featured-type">{featured.type ?? "Case study"}</p>
+            </div>
+          </div>
 
-    <div class="grid gap-8 md:grid-cols-2">
-      <!-- Left Text -->
-      <div>
-        <p class="text-white/70 text-lg mb-6 max-w-xl">
-          Want to collaborate or have an opportunity? Feel free to reach out.
-          I’m open to internships, freelance design work, and web projects.
-        </p>
-
-        <div class="space-y-3 text-white/80">
-          <p>
-            <span class="text-white/50">Email:</span>
-            <a href="mailto:your-email@example.com" class="text-indigo-400 hover:underline">
-              your-email@example.com
-            </a>
+          <p class="featured-desc">
+            {featured.longSummary ?? featured.summary}
           </p>
 
-          <p>
-            <span class="text-white/50">GitHub:</span>
-            <a href="#" class="text-indigo-400 hover:underline">
-              github.com/RipalPatel18
-            </a>
-          </p>
+          <ul class="featured-list">
+            {(featured.highlights ?? []).slice(0, 6).map((x) => <li>{x}</li>)}
+          </ul>
 
-          <p>
-            <span class="text-white/50">LinkedIn:</span>
-            <a href="#" class="text-indigo-400 hover:underline">
-              linkedin.com/in/your-link
+          <div class="featured-tech">
+            {(featured.tech ?? []).slice(0, 7).map((t) => (
+              <span class="tech-pill">{t}</span>
+            ))}
+          </div>
+
+          <div class="featured-actions">
+            <a class="btn btn-primary" href={`/projects/${featured.slug}`}>
+              View Case Study <span class="btn-icon">→</span>
             </a>
-          </p>
+
+            {featured.github && (
+              <a class="btn btn-ghost" href={featured.github} target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            )}
+
+            {featured.live && (
+              <a class="btn btn-ghost" href={featured.live} target="_blank" rel="noreferrer">
+                Live Demo
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS (icons + names) -->
+  <section id="skills" class="section section-lg">
+    <div class="container hero-center" data-reveal="up">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-sub">My main tech stack and tools I work with.</p>
+
+      <div class="skills-icons-grid glass" style="padding:18px; width:100%; max-width:980px;">
+        <!-- Skill Item -->
+        <div class="skill-icon-item">
+          <span class="skill-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path d="M4 6.5C4 5.12 5.12 4 6.5 4h11C18.88 4 20 5.12 20 6.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C5.12 20 4 18.88 4 17.5v-11Z" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M7 8h10M7 12h6M7 16h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="skill-name">HTML</span>
+        </div>
+
+        <div class="skill-icon-item">
+          <span class="skill-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path d="M12 3l7 4v10l-7 4-7-4V7l7-4Z" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M12 7v14" stroke="currentColor" stroke-width="1.7" opacity=".8"/>
+            </svg>
+          </span>
+          <span class="skill-name">CSS</span>
+        </div>
+
+        <div class="skill-icon-item">
+          <span class="skill-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path d="M7 8l-3 4 3 4M17 8l3 4-3 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 19l4-14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="skill-name">JavaScript</span>
+        </div>
+
+        <div class="skill-icon-item">
+          <span class="skill-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M12 3c4 0 7 4 7 9s-3 9-7 9-7-4-7-9 3-9 7-9Z" stroke="currentColor" stroke-width="1.7" opacity=".7"/>
+            </svg>
+          </span>
+          <span class="skill-name">React</span>
+        </div>
+
+        <div class="skill-icon-item">
+          <span class="skill-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path d="M12 3l8 4.5v9L12 21 4 16.5v-9L12 3Z" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M9 12h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="skill-name">Node.js</span>
+        </div>
+
+        <div class="skill-icon-item">
+          <span class="skill-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path d="M12 3c4.42 0 8 1.57 8 3.5S16.42 10 12 10 4 8.43 4 6.5 7.58 3 12 3Z" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M4 6.5V12c0 1.93 3.58 3.5 8 3.5s8-1.57 8-3.5V6.5" stroke="currentColor" stroke-width="1.7"/>
+            </svg>
+          </span>
+          <span class="skill-name">MySQL</span>
+        </div>
+
+        <div class="skill-icon-item">
+          <span class="skill-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path d="M6 7h12M6 12h12M6 17h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              <path d="M4 5.5C4 4.12 5.12 3 6.5 3h11C18.88 3 20 4.12 20 5.5v13c0 1.38-1.12 2.5-2.5 2.5h-11C5.12 21 4 19.88 4 18.5v-13Z" stroke="currentColor" stroke-width="1.7" opacity=".6"/>
+            </svg>
+          </span>
+          <span class="skill-name">Git/GitHub</span>
         </div>
       </div>
 
-      <!-- Right Card -->
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
-        <h3 class="text-xl font-semibold mb-2">Quick Message</h3>
-        <p class="text-white/70 mb-6">
-          You can email me directly, or connect on LinkedIn.
-        </p>
+      <p class="muted" style="max-width:760px; margin:18px 0 0; font-size:16px; line-height:1.8;">
+        I also work with Astro, Tailwind, MongoDB, Figma, and deploy projects on Vercel.
+      </p>
+    </div>
+  </section>
 
-        <div class="flex flex-col gap-3">
-          <a href="mailto:your-email@example.com" class="inline-flex justify-center rounded-xl bg-indigo-500 px-5 py-3 text-sm font-semibold hover:bg-indigo-400 transition">
-            Email Me
-          </a>
+  <!-- CONTACT (pretty form) -->
+  <section id="contact" class="section section-lg">
+    <div class="container hero-center" data-reveal="up">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="section-sub">
+        Want to work together or discuss an opportunity? Send a message and I’ll reply soon.
+      </p>
 
-          <a href="#" class="inline-flex justify-center rounded-xl border border-white/15 px-5 py-3 text-sm font-semibold hover:border-white/30 transition" >
-            Connect on LinkedIn
+      <form class="contact-card glass" style="width:100%; max-width:820px;" method="post" action="#">
+        <div class="contact-grid">
+          <label class="field">
+            <span class="label">Full name</span>
+            <input class="input" name="name" required placeholder="Ripal Patel" />
+          </label>
+
+          <label class="field">
+            <span class="label">Email</span>
+            <input class="input" type="email" name="email" required placeholder="you@example.com" />
+          </label>
+
+          <label class="field field-full">
+            <span class="label">Message</span>
+            <textarea class="input" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+          </label>
+        </div>
+
+        <div class="contact-actions">
+          <button class="btn btn-primary" type="submit">
+            Send Message <span class="btn-icon">→</span>
+          </button>
+
+          <a class="btn btn-ghost" href="mailto:yourname@email.com">
+            Email Instead
           </a>
         </div>
-      </div>
+
+        <div class="contact-note">
+          <span class="mini-dot" aria-hidden="true"></span>
+          <span>Usually replies within 24 hours.</span>
+        </div>
+      </form>
     </div>
-  </div>
-</section>
-
-
-
-<!-- FOOTER -->
-<footer class="bg-black text-white px-6 py-10 border-t border-white/10">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <p class="text-white/60 text-sm">
-      © {new Date().getFullYear()} Ripal Patel. All rights reserved.
-    </p>
-
-    <div class="flex gap-6 text-sm text-white/70">
-      <a href="#projects" class="hover:text-indigo-400">Projects</a>
-      <a href="#design" class="hover:text-indigo-400">Design</a>
-      <a href="#skills" class="hover:text-indigo-400">Skills</a>
-      <a href="#contact" class="hover:text-indigo-400">Contact</a>
-    </div>
-  </div>
-</footer>
-
-
-</BaseLayout>
+  </section>
+  </BaseLayout>

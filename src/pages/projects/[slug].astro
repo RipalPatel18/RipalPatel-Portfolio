@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { projects } from "../../data/projects";
+
+export function getStaticPaths() {
+  return projects.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const project = projects.find((p) => p.slug === slug);
+if (!project) throw new Error("Project not found");
+---
+
+<BaseLayout title={`Ripal | ${project.title}`}>
+  <section class="section section-lg">
+    <div class="container" data-reveal>
+      <a class="btn btn-sm ghost" href="/projects">← Back</a>
+
+      <div class="project-detail glass" style="margin-top:16px">
+        <img class="project-hero-img" src={project.image} alt={`${project.title} screenshot`} />
+
+        <div class="project-detail-body">
+          <h2 class="section-title" style="margin:0">{project.title}</h2>
+          <p class="section-sub">{project.details}</p>
+
+          <div class="tags">
+            {project.tech.map((t) => <span>{t}</span>)}
+          </div>
+
+          <div class="detail-actions">
+            <a class="btn" href={project.live} target="_blank">Live Demo</a>
+            <a class="btn ghost" href={project.github} target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

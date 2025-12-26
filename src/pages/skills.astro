@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { skills } from "../data/skills";
+---
+
+<BaseLayout title="Ripal | Skills">
+  <section class="section section-lg">
+    <div class="container" data-reveal>
+      <h2 class="section-title">Skills</h2>
+      <p class="section-sub">Tech stack I use in school and projects.</p>
+
+      <div class="skills-logos">
+        {skills.map((s) => (
+          <div class="skill-logo glass" data-tilt>
+            <img src={s.icon} alt={`${s.name} logo`} loading="lazy" />
+            <span>{s.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

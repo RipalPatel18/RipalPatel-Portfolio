@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { projects } from "../../data/projects";
+---
+
+<BaseLayout title="Ripal | Projects">
+  <section class="section section-lg">
+    <div class="container" data-reveal>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">Clean cards with hover animation, live demo and GitHub links.</p>
+
+      <div class="case-grid">
+        {projects.map((p) => (
+          <a class="case-card glass" href={`/projects/${p.slug}`} data-tilt>
+            <div class="case-media">
+              <img src={p.image} alt={`${p.title} preview`} loading="lazy" />
+            </div>
+            <div class="case-body">
+              <div class="case-title">
+                <h3>{p.title}</h3>
+                <span class="pill-mini">Case study</span>
+              </div>
+              <p>{p.summary}</p>
+
+              <div class="case-tags">
+                {p.tech.map((t) => <span>{t}</span>)}
+              </div>
+
+              <div class="case-foot">
+                <span class="case-link">Open details</span>
+                <span class="case-arrow">→</span>
+              </div>
+            </div>
+            <div class="case-glow"></div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

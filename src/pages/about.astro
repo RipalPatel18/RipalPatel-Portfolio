@@ -1,42 +1,32 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import GlowBackground from "../components/GlowBackground.astro";
-import ScrollProgress from "../components/ScrollProgress.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-import Reveal from "../components/Reveal.astro";
-import PageHeader from "../components/PageHeader.astro";
 ---
 
-<BaseLayout title="About | Ripal Patel" description="About Ripal Patel.">
-  <div class="page page-enter">
-    <GlowBackground />
-    <ScrollProgress />
-    <Navbar />
-
-    <PageHeader title="About" subtitle="Web Development student focused on frontend and UI design." />
-
-    <main class="section" style="padding-top:0">
-      <div class="container">
-        <Reveal delay={0}>
-          <div class="card tilt gradient" data-tilt>
-            <div class="card-body">
-              <p class="card-text" style="margin-bottom:12px;">
-                I’m <strong style="color:var(--text)">Ripal Patel</strong>. I build clean, responsive websites and
-                create modern UI/graphic designs.
-              </p>
-              <p class="card-text" style="margin-bottom:12px;">
-                Tools: HTML, CSS, JavaScript, React/Astro, GitHub • Figma + Adobe for design.
-              </p>
-              <div class="tags">
-                <span class="tag">Frontend</span><span class="tag">UI Design</span><span class="tag">Branding</span><span class="tag">Figma</span>
-              </div>
-            </div>
-          </div>
-        </Reveal>
+<BaseLayout title="Ripal | About">
+  <section class="section section-lg">
+    <div class="container two-col" data-reveal>
+      <div>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-sub">
+          I’m Ripal, a Web Development student who enjoys building modern, responsive websites with
+          clean UI, accessibility, and smooth animations.
+        </p>
+        <div class="about-actions">
+          <a class="btn" href="/contact">Connect with me</a>
+          <a class="btn ghost" href="/projects">See my projects</a>
+        </div>
       </div>
-    </main>
 
-    <Footer />
-  </div>
+      <div class="card glass" data-tilt>
+        <h3 style="margin:0 0 8px">Quick Info</h3>
+        <p style="margin:0;color:var(--muted);line-height:1.6">
+          Toronto, ON • Open to internships • Frontend + Full-Stack
+        </p>
+
+        <div class="tags" style="margin-top:14px">
+          <span>UI</span><span>Animations</span><span>React</span><span>Node</span>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
